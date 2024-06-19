@@ -18,6 +18,15 @@ namespace CookBook {
             Button AddBtn = new Button();
             DishCard dishCard = new DishCard();
             AddBtn.Size = new Size(dishCard.Width, dishCard.Height);
+            AddBtn.Text = "Add";
+            AddBtn.Click += (object s, EventArgs ev) => {
+                //this.Hide();
+                AddDishForm addDishForm = new AddDishForm();
+                addDishForm.FormClosed += (object s, FormClosedEventArgs ev) => { 
+                    //this.Show(); 
+                };
+                addDishForm.Show();
+            };                
             this.LayoutPanel.Controls.Add(AddBtn);
             this.LayoutPanel.Controls.SetChildIndex(AddBtn, 0);
         }

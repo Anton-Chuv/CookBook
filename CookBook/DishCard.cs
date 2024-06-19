@@ -17,7 +17,7 @@ namespace CookBook {
         public DishCard(DBManager.DishFields dish) {
             InitializeComponent();
             DishNameLbl.Text = dish.Name;
-            DishCompositionLbl.Text = dish.Property;
+            DishCompositionLbl.Text = dish.Composition;
             _id = dish.ID;
         }
     }

@@ -15,10 +15,10 @@ namespace CookBook {
         }
 
         private void ListOfDishesForm_Load(object sender, EventArgs e) {
-            DBManager DB = new DBManager();
-
-            for (int i = 0; i < 10; i++)
-                this.LayoutPanel.Controls.Add(new DishCard(new DBManager.DishFields()));
+            foreach (var dish in DBManager.GetList()) {
+                this.LayoutPanel.Controls.Add(new DishCard(dish));
+            }
+            //this.LayoutPanel.Controls.Add(new DishCard(new DBManager.DishFields()));
         }
     }
 }

@@ -32,14 +32,14 @@
             LayoutPanel.Dock = DockStyle.Fill;
             LayoutPanel.Location = new Point(0, 0);
             LayoutPanel.Name = "LayoutPanel";
-            LayoutPanel.Size = new Size(800, 450);
+            LayoutPanel.Size = new Size(712, 450);
             LayoutPanel.TabIndex = 1;
             // 
             // ListOfDishesForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(712, 450);
             Controls.Add(LayoutPanel);
             Name = "ListOfDishesForm";
             StartPosition = FormStartPosition.CenterScreen;
