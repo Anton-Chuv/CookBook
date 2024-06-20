@@ -25,7 +25,7 @@ namespace CookBook {
                 this.Composition = composition;
             }
             public DishFields() {
-                this.ID = -1;
+                this.ID = -2;
                 this.Name = "Placeholder";
                 this.Composition = "Placeholder";
 
@@ -62,6 +62,16 @@ namespace CookBook {
                 SQLiteCommand command = new SQLiteCommand();
                 command.Connection = connection;
                 command.CommandText = $"Delete FROM Dishes WHERE ID={id}";
+                command.ExecuteNonQuery();
+            }
+        }
+
+        public static void ChangeRecord(DishFields dishFields) {
+            using (var connection = new SQLiteConnection("Data Source=data.db")) {
+                connection.Open();
+                SQLiteCommand command = new SQLiteCommand();
+                command.Connection = connection;
+                command.CommandText = $"UPDATE Dishes SET Name='{dishFields.Name}', Composition='{dishFields.Composition}' WHERE ID={dishFields.ID}";
                 command.ExecuteNonQuery();
             }
         }

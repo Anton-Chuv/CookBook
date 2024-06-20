@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace CookBook {
     public partial class DishCard : UserControl {
-        int _id;
         int _btnSize = 40;
-        public int ID { get { return _id; } }
-        public DishCard() {
-            InitializeComponent();
-        }
+        public DBManager.DishFields _dishFields { get; }
+        public int ID { get { return _dishFields.ID; } }
         public DishCard(DBManager.DishFields dish) {
+            _dishFields = dish;
             InitializeComponent();
             int _maxNameLen = 20;
             if (dish.Name.Length > _maxNameLen) {
@@ -29,8 +27,6 @@ namespace CookBook {
             //DishCompositionLbl.Text = dish.Composition;
             //DishCompositionBox.Text = dish.Composition;
             DishCompositionRichTextBox.Text = dish.Composition;
-
-            _id = dish.ID;
         }
         public void AddBtn(Button btn) {
             btn.Size = new Size(_btnSize, _btnSize);

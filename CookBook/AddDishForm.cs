@@ -10,15 +10,29 @@ using System.Windows.Forms;
 
 namespace CookBook {
     public partial class AddDishForm : Form {
+        int _id = -1;
         public AddDishForm() {
             InitializeComponent();
+        }
+
+        public AddDishForm(DBManager.DishFields dishFields) {
+            InitializeComponent();
+            this.NameTextBox.Text = dishFields.Name;
+            this.CompositionTextBox.Text = dishFields.Composition;
+            this._id = dishFields.ID;
         }
 
         private void AddSaveBtn_Click(object sender, EventArgs e) {
             DBManager.DishFields dishFields = new DBManager.DishFields();
             dishFields.Name = this.NameTextBox.Text;
             dishFields.Composition = this.CompositionTextBox.Text;
-            DBManager.AddRecord(dishFields);
+            if (_id == -1) 
+                DBManager.AddRecord(dishFields);
+            else {
+                dishFields.ID = _id;
+                DBManager.ChangeRecord(dishFields);
+                Console.WriteLine("aa");
+            }
             this.Close();
         }
 
