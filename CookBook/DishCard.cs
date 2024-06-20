@@ -34,7 +34,6 @@ namespace CookBook {
         }
 
         private void DishCard_Load(object sender, EventArgs e) {
-
         }
     }
 }

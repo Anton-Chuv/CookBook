@@ -58,6 +58,7 @@
             DishCompositionRichTextBox.ScrollBars = RichTextBoxScrollBars.Vertical;
             DishCompositionRichTextBox.Size = new Size(183, 70);
             DishCompositionRichTextBox.TabIndex = 6;
+            DishCompositionRichTextBox.TabStop = false;
             DishCompositionRichTextBox.Text = "Состав";
             // 
             // DishNameLbl
