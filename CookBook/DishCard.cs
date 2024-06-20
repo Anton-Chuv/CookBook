@@ -18,8 +18,18 @@ namespace CookBook {
         }
         public DishCard(DBManager.DishFields dish) {
             InitializeComponent();
-            DishNameLbl.Text = dish.Name;
-            DishCompositionLbl.Text = dish.Composition;
+            int _maxNameLen = 20;
+            if (dish.Name.Length > _maxNameLen) {
+                DishNameLbl.Text = dish.Name.Substring(0, _maxNameLen) + "…";
+                ToolTip toolTip = new ToolTip();
+                toolTip.SetToolTip(DishNameLbl, dish.Name);
+            }
+            else
+                DishNameLbl.Text = dish.Name;
+            //DishCompositionLbl.Text = dish.Composition;
+            //DishCompositionBox.Text = dish.Composition;
+            DishCompositionRichTextBox.Text = dish.Composition;
+
             _id = dish.ID;
         }
         public void AddBtn(Button btn) {

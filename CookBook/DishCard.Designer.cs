@@ -23,22 +23,12 @@
         /// содержимое этого метода с помощью редактора кода.
         /// </summary>
         private void InitializeComponent() {
-            DishNameLbl = new Label();
             DishPreviewBox = new PictureBox();
-            DishCompositionLbl = new Label();
             BtnsLayoutPanel = new FlowLayoutPanel();
+            DishCompositionRichTextBox = new RichTextBox();
+            DishNameLbl = new Label();
             ((System.ComponentModel.ISupportInitialize)DishPreviewBox).BeginInit();
             SuspendLayout();
-            // 
-            // DishNameLbl
-            // 
-            DishNameLbl.AutoSize = true;
-            DishNameLbl.Font = new Font("Segoe UI", 14F);
-            DishNameLbl.Location = new Point(106, 0);
-            DishNameLbl.Name = "DishNameLbl";
-            DishNameLbl.Size = new Size(95, 25);
-            DishNameLbl.TabIndex = 0;
-            DishNameLbl.Text = "Название";
             // 
             // DishPreviewBox
             // 
@@ -51,15 +41,6 @@
             DishPreviewBox.TabIndex = 1;
             DishPreviewBox.TabStop = false;
             // 
-            // DishCompositionLbl
-            // 
-            DishCompositionLbl.AutoSize = true;
-            DishCompositionLbl.Location = new Point(106, 25);
-            DishCompositionLbl.Name = "DishCompositionLbl";
-            DishCompositionLbl.Size = new Size(45, 15);
-            DishCompositionLbl.TabIndex = 2;
-            DishCompositionLbl.Text = "Состав";
-            // 
             // BtnsLayoutPanel
             // 
             BtnsLayoutPanel.Location = new Point(295, 3);
@@ -67,29 +48,49 @@
             BtnsLayoutPanel.Size = new Size(52, 94);
             BtnsLayoutPanel.TabIndex = 3;
             // 
+            // DishCompositionRichTextBox
+            // 
+            DishCompositionRichTextBox.BackColor = SystemColors.Control;
+            DishCompositionRichTextBox.BorderStyle = BorderStyle.None;
+            DishCompositionRichTextBox.Location = new Point(106, 27);
+            DishCompositionRichTextBox.Name = "DishCompositionRichTextBox";
+            DishCompositionRichTextBox.ReadOnly = true;
+            DishCompositionRichTextBox.ScrollBars = RichTextBoxScrollBars.Vertical;
+            DishCompositionRichTextBox.Size = new Size(183, 70);
+            DishCompositionRichTextBox.TabIndex = 6;
+            DishCompositionRichTextBox.Text = "Состав";
+            // 
+            // DishNameLbl
+            // 
+            DishNameLbl.Font = new Font("Segoe UI", 12F, FontStyle.Underline, GraphicsUnit.Point, 204);
+            DishNameLbl.Location = new Point(103, 3);
+            DishNameLbl.Margin = new Padding(0, 0, 3, 0);
+            DishNameLbl.Name = "DishNameLbl";
+            DishNameLbl.Size = new Size(186, 21);
+            DishNameLbl.TabIndex = 7;
+            DishNameLbl.Text = "Название";
+            // 
             // DishCard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaption;
+            BackColor = SystemColors.Control;
             BorderStyle = BorderStyle.FixedSingle;
-            Controls.Add(BtnsLayoutPanel);
-            Controls.Add(DishCompositionLbl);
-            Controls.Add(DishPreviewBox);
             Controls.Add(DishNameLbl);
+            Controls.Add(DishCompositionRichTextBox);
+            Controls.Add(BtnsLayoutPanel);
+            Controls.Add(DishPreviewBox);
             Name = "DishCard";
             Size = new Size(350, 100);
             Load += DishCard_Load;
             ((System.ComponentModel.ISupportInitialize)DishPreviewBox).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Label DishNameLbl;
         private PictureBox DishPreviewBox;
-        private Label DishCompositionLbl;
         private FlowLayoutPanel BtnsLayoutPanel;
+        private RichTextBox DishCompositionRichTextBox;
+        private Label DishNameLbl;
     }
 }
