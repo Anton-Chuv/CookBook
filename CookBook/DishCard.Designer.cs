@@ -43,9 +43,11 @@
             // DishPreviewBox
             // 
             DishPreviewBox.Dock = DockStyle.Left;
+            DishPreviewBox.Image = Properties.Resources._3671795_food_location_icon;
             DishPreviewBox.Location = new Point(0, 0);
             DishPreviewBox.Name = "DishPreviewBox";
             DishPreviewBox.Size = new Size(100, 100);
+            DishPreviewBox.SizeMode = PictureBoxSizeMode.CenterImage;
             DishPreviewBox.TabIndex = 1;
             DishPreviewBox.TabStop = false;
             // 
@@ -77,6 +79,7 @@
             Controls.Add(DishNameLbl);
             Name = "DishCard";
             Size = new Size(350, 100);
+            Load += DishCard_Load;
             ((System.ComponentModel.ISupportInitialize)DishPreviewBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
