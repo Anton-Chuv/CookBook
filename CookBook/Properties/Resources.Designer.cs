@@ -63,9 +63,29 @@ namespace CookBook.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2931178_change_edit_pencil_creative_design_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("_2931178_change_edit_pencil_creative_design_icon__1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _3671795_food_location_icon {
             get {
                 object obj = ResourceManager.GetObject("3671795_food_location_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8664938_trash_can_delete_remove_icon {
+            get {
+                object obj = ResourceManager.GetObject("_8664938_trash_can_delete_remove_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

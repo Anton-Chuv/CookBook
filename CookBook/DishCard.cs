@@ -30,7 +30,6 @@ namespace CookBook {
         }
         public void AddBtn(Button btn) {
             btn.Size = new Size(_btnSize, _btnSize);
-            btn.FlatStyle = FlatStyle.System;
             this.BtnsLayoutPanel.Controls.Add(btn);
         }
 
