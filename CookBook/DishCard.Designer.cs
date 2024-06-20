@@ -60,9 +60,9 @@
             // 
             // BtnsLayoutPanel
             // 
-            BtnsLayoutPanel.Location = new Point(106, 43);
+            BtnsLayoutPanel.Location = new Point(295, 3);
             BtnsLayoutPanel.Name = "BtnsLayoutPanel";
-            BtnsLayoutPanel.Size = new Size(200, 28);
+            BtnsLayoutPanel.Size = new Size(52, 94);
             BtnsLayoutPanel.TabIndex = 3;
             // 
             // DishCard

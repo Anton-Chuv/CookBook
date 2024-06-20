@@ -11,6 +11,8 @@ using System.Windows.Forms;
 namespace CookBook {
     public partial class DishCard : UserControl {
         int _id;
+        int _btnSize = 40;
+        public int ID {  get { return _id; } }
         public DishCard() {
             InitializeComponent();
         }
@@ -19,6 +21,11 @@ namespace CookBook {
             DishNameLbl.Text = dish.Name;
             DishCompositionLbl.Text = dish.Composition;
             _id = dish.ID;
+        }
+        public void AddBtn(Button btn) {
+            btn.Size = new Size(_btnSize, _btnSize);
+            btn.FlatStyle = FlatStyle.System;
+            this.BtnsLayoutPanel.Controls.Add(btn);
         }
     }
 }

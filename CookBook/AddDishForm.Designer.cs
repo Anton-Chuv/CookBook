@@ -102,6 +102,7 @@
             Name = "AddDishForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AddDishForm";
+            Load += AddDishForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -113,6 +114,6 @@
         private Label AddNameLbl;
         private Label AddCompositionLbl;
         private Button AddCancelBtn;
-        private Button AddSaveBtn;
+        public Button AddSaveBtn;
     }
 }

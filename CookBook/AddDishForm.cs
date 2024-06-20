@@ -19,10 +19,15 @@ namespace CookBook {
             dishFields.Name = this.NameTextBox.Text;
             dishFields.Composition = this.CompositionTextBox.Text;
             DBManager.AddRecord(dishFields);
+            this.Close();
         }
 
         private void AddCancelBtn_Click(object sender, EventArgs e) {
             this.Close();
+        }
+
+        private void AddDishForm_Load(object sender, EventArgs e) {
+
         }
     }
 }

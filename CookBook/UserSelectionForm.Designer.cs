@@ -24,8 +24,8 @@
         /// </summary>
         private void InitializeComponent() {
             GuestBtn = new Button();
-            CookBtn = new Button();
             ChiefBtn = new Button();
+            CookBtn = new Button();
             SuspendLayout();
             // 
             // GuestBtn
@@ -38,16 +38,6 @@
             GuestBtn.UseVisualStyleBackColor = true;
             GuestBtn.Click += GuestBtn_Click;
             // 
-            // CookBtn
-            // 
-            CookBtn.Location = new Point(30, 41);
-            CookBtn.Name = "CookBtn";
-            CookBtn.Size = new Size(75, 23);
-            CookBtn.TabIndex = 1;
-            CookBtn.Text = "Повар";
-            CookBtn.UseVisualStyleBackColor = true;
-            CookBtn.Click += CookBtn_Click;
-            // 
             // ChiefBtn
             // 
             ChiefBtn.Location = new Point(30, 70);
@@ -57,6 +47,17 @@
             ChiefBtn.Text = "Шеф";
             ChiefBtn.UseVisualStyleBackColor = true;
             ChiefBtn.Click += ChiefBtn_Click;
+            // 
+            // CookBtn
+            // 
+            CookBtn.Location = new Point(30, 41);
+            CookBtn.Name = "CookBtn";
+            CookBtn.Size = new Size(75, 23);
+            CookBtn.TabIndex = 1;
+            CookBtn.Text = "Повар";
+            CookBtn.UseVisualStyleBackColor = true;
+            CookBtn.Visible = false;
+            CookBtn.Click += CookBtn_Click;
             // 
             // UserSelectionForm
             // 
@@ -76,7 +77,7 @@
         #endregion
 
         private Button GuestBtn;
-        private Button CookBtn;
         private Button ChiefBtn;
+        private Button CookBtn;
     }
 }

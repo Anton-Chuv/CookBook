@@ -16,7 +16,7 @@ namespace CookBook {
 
         private void GuestBtn_Click(object sender, EventArgs e) {
             this.Hide();
-            ListOfDishesForm listOfDishesForm = new ListOfDishesForm();
+            GuestListOfDishesForm listOfDishesForm = new GuestListOfDishesForm();
             listOfDishesForm.FormClosed += (object s, FormClosedEventArgs ev) => { this.Show(); };
             listOfDishesForm.Show();
         }

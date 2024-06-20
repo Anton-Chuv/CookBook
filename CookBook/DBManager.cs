@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 using System.Data.SQLite;
 using System.Windows.Input;
+using static CookBook.DBManager;
 
 namespace CookBook {
     public class DBManager {
@@ -51,6 +52,16 @@ namespace CookBook {
                 SQLiteCommand command = new SQLiteCommand();
                 command.Connection = connection;
                 command.CommandText = $"INSERT INTO Dishes (Name, Composition) VALUES ('{dishFields.Name}', '{dishFields.Composition}')";
+                command.ExecuteNonQuery();
+            }
+        }
+
+        public static void DeleteRecord(int id) {
+            using (var connection = new SQLiteConnection("Data Source=data.db")) {
+                connection.Open();
+                SQLiteCommand command = new SQLiteCommand();
+                command.Connection = connection;
+                command.CommandText = $"Delete FROM Dishes WHERE ID={id}";
                 command.ExecuteNonQuery();
             }
         }
