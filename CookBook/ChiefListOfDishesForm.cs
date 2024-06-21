@@ -11,12 +11,9 @@ using System.Windows.Forms;
 namespace CookBook {
     public partial class ChiefListOfDishesForm : ListOfDishesForm {
         public ChiefListOfDishesForm() {
-            InitializeComponent();
+            //InitializeComponent();
         }
 
-        private void ChiefListOfDishesForm_Load(object sender, EventArgs e) {
-            
-        }
         protected override void ReloadList() {
             base.ReloadList();
 

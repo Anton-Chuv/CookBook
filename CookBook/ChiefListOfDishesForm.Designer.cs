@@ -27,12 +27,11 @@
             // 
             // ChiefListOfDishesForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(748, 450);
+            //AutoScaleDimensions = new SizeF(7F, 15F);
+            //AutoScaleMode = AutoScaleMode.Font;
+            //ClientSize = new Size(728, 450);
             Name = "ChiefListOfDishesForm";
             Text = "ChiefListOfDishesForm";
-            Load += ChiefListOfDishesForm_Load;
             ResumeLayout(false);
         }
 
