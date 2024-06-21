@@ -27,6 +27,8 @@ namespace CookBook {
             //DishCompositionLbl.Text = dish.Composition;
             //DishCompositionBox.Text = dish.Composition;
             DishCompositionRichTextBox.Text = dish.Composition;
+            if (dish.Picture != null)
+                DishPreviewBox.Image = dish.Picture;
         }
         public void AddBtn(Button btn) {
             btn.Size = new Size(_btnSize, _btnSize);

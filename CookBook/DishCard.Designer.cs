@@ -32,12 +32,13 @@
             // 
             // DishPreviewBox
             // 
+            DishPreviewBox.BackgroundImage = Properties.Resources._3671795_food_location_icon;
+            DishPreviewBox.BackgroundImageLayout = ImageLayout.Center;
             DishPreviewBox.Dock = DockStyle.Left;
-            DishPreviewBox.Image = Properties.Resources._3671795_food_location_icon;
             DishPreviewBox.Location = new Point(0, 0);
             DishPreviewBox.Name = "DishPreviewBox";
             DishPreviewBox.Size = new Size(100, 100);
-            DishPreviewBox.SizeMode = PictureBoxSizeMode.CenterImage;
+            DishPreviewBox.SizeMode = PictureBoxSizeMode.StretchImage;
             DishPreviewBox.TabIndex = 1;
             DishPreviewBox.TabStop = false;
             // 

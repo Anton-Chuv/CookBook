@@ -19,6 +19,7 @@ namespace CookBook {
             InitializeComponent();
             this.NameTextBox.Text = dishFields.Name;
             this.CompositionTextBox.Text = dishFields.Composition;
+            this.PictureBox.Image = dishFields.Picture;
             this._id = dishFields.ID;
         }
 
