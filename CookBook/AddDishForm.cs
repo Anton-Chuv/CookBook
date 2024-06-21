@@ -26,12 +26,12 @@ namespace CookBook {
             DBManager.DishFields dishFields = new DBManager.DishFields();
             dishFields.Name = this.NameTextBox.Text;
             dishFields.Composition = this.CompositionTextBox.Text;
-            if (_id == -1) 
+            dishFields.Picture = this.PictureBox.Image;
+            if (_id == -1)
                 DBManager.AddRecord(dishFields);
             else {
                 dishFields.ID = _id;
                 DBManager.ChangeRecord(dishFields);
-                Console.WriteLine("aa");
             }
             this.Close();
         }
@@ -41,7 +41,25 @@ namespace CookBook {
         }
 
         private void AddDishForm_Load(object sender, EventArgs e) {
+            PictureBox.AllowDrop = true;
+        }
 
+        private void PictureBox_DragDrop(object sender, DragEventArgs e) {
+            var image = e.Data.GetData(DataFormats.FileDrop);
+            if (image != null) {
+                var fileNames = image as string[];
+                if (fileNames.Length > 0) {
+                    this.PictureBox.Image = Image.FromFile(fileNames[0]);
+                    //this.PictureBox.
+                }
+            }
+
+            //PictureBox.Image = (Image)e.Data.GetData(DataFormats.Bitmap);
+        }
+
+        private void PictureBox_DragEnter(object sender, DragEventArgs e) {
+            e.Effect = DragDropEffects.Copy;
+            //e.Effect = e.AllowedEffect;
         }
     }
 }

@@ -89,5 +89,15 @@ namespace CookBook.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8680289_image_add_line_icon {
+            get {
+                object obj = ResourceManager.GetObject("8680289_image_add_line_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

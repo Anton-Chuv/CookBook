@@ -29,6 +29,8 @@
             AddCompositionLbl = new Label();
             AddCancelBtn = new Button();
             AddSaveBtn = new Button();
+            PictureBox = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)PictureBox).BeginInit();
             SuspendLayout();
             // 
             // NameTextBox
@@ -43,7 +45,7 @@
             CompositionTextBox.Location = new Point(12, 83);
             CompositionTextBox.Multiline = true;
             CompositionTextBox.Name = "CompositionTextBox";
-            CompositionTextBox.Size = new Size(360, 87);
+            CompositionTextBox.Size = new Size(254, 100);
             CompositionTextBox.TabIndex = 1;
             // 
             // AddNameLbl
@@ -68,7 +70,7 @@
             // 
             // AddCancelBtn
             // 
-            AddCancelBtn.Location = new Point(12, 176);
+            AddCancelBtn.Location = new Point(12, 189);
             AddCancelBtn.Name = "AddCancelBtn";
             AddCancelBtn.Size = new Size(75, 23);
             AddCancelBtn.TabIndex = 4;
@@ -78,7 +80,7 @@
             // 
             // AddSaveBtn
             // 
-            AddSaveBtn.Location = new Point(297, 176);
+            AddSaveBtn.Location = new Point(297, 189);
             AddSaveBtn.Name = "AddSaveBtn";
             AddSaveBtn.Size = new Size(75, 23);
             AddSaveBtn.TabIndex = 5;
@@ -86,11 +88,26 @@
             AddSaveBtn.UseVisualStyleBackColor = true;
             AddSaveBtn.Click += AddSaveBtn_Click;
             // 
+            // PictureBox
+            // 
+            PictureBox.BackgroundImage = Properties.Resources._8680289_image_add_line_icon;
+            PictureBox.BackgroundImageLayout = ImageLayout.Center;
+            PictureBox.BorderStyle = BorderStyle.FixedSingle;
+            PictureBox.Location = new Point(272, 83);
+            PictureBox.Name = "PictureBox";
+            PictureBox.Size = new Size(100, 100);
+            PictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            PictureBox.TabIndex = 6;
+            PictureBox.TabStop = false;
+            PictureBox.DragDrop += PictureBox_DragDrop;
+            PictureBox.DragEnter += PictureBox_DragEnter;
+            // 
             // AddDishForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(384, 211);
+            ClientSize = new Size(384, 220);
+            Controls.Add(PictureBox);
             Controls.Add(AddSaveBtn);
             Controls.Add(AddCancelBtn);
             Controls.Add(AddCompositionLbl);
@@ -103,6 +120,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AddDishForm";
             Load += AddDishForm_Load;
+            ((System.ComponentModel.ISupportInitialize)PictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -115,5 +133,6 @@
         private Label AddCompositionLbl;
         private Button AddCancelBtn;
         public Button AddSaveBtn;
+        private PictureBox PictureBox;
     }
 }

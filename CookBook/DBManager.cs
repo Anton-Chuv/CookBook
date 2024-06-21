@@ -18,11 +18,18 @@ namespace CookBook {
             public int ID { get; set; }
             public string Name { get; set; }
             public string Composition { get; set; }
+            public Image Picture { get; set; }
 
             public DishFields(int id, string name, string composition) {
                 this.ID = id;
                 this.Name = name;
                 this.Composition = composition;
+            }
+            public DishFields(int id, string name, string composition, Image picture) {
+                this.ID = id;
+                this.Name = name;
+                this.Composition = composition;
+                this.Picture = picture;
             }
             public DishFields() {
                 this.ID = -2;
@@ -51,7 +58,13 @@ namespace CookBook {
                 connection.Open();
                 SQLiteCommand command = new SQLiteCommand();
                 command.Connection = connection;
-                command.CommandText = $"INSERT INTO Dishes (Name, Composition) VALUES ('{dishFields.Name}', '{dishFields.Composition}')";
+                byte[] imageBytes;
+                imageBytes = ImageToByte(dishFields.Picture);
+                string cmnd = $"INSERT INTO Dishes (Name, Composition, Picture) VALUES ('{dishFields.Name}', '{dishFields.Composition}', @0)";
+                command.CommandText = cmnd;
+                SQLiteParameter param = new SQLiteParameter("@0", System.Data.DbType.Binary);
+                param.Value = imageBytes;
+                command.Parameters.Add(param);
                 command.ExecuteNonQuery();
             }
         }
@@ -100,5 +113,15 @@ namespace CookBook {
             }
             return dishList;
         }
+
+        public static byte[] ImageToByte(Image image) {
+            using (MemoryStream ms = new MemoryStream()) {
+                // Convert Image to byte[]
+                image.Save(ms, image.RawFormat);
+                byte[] imageBytes = ms.ToArray();
+                return imageBytes;
+            }
+        }
+
     }
 }
