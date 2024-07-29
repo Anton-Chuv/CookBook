@@ -25,7 +25,6 @@
         private void InitializeComponent() {
             GuestBtn = new Button();
             ChiefBtn = new Button();
-            CookBtn = new Button();
             SuspendLayout();
             // 
             // GuestBtn
@@ -44,20 +43,9 @@
             ChiefBtn.Name = "ChiefBtn";
             ChiefBtn.Size = new Size(75, 23);
             ChiefBtn.TabIndex = 2;
-            ChiefBtn.Text = "Шеф";
+            ChiefBtn.Text = "Повар";
             ChiefBtn.UseVisualStyleBackColor = true;
             ChiefBtn.Click += ChiefBtn_Click;
-            // 
-            // CookBtn
-            // 
-            CookBtn.Location = new Point(30, 41);
-            CookBtn.Name = "CookBtn";
-            CookBtn.Size = new Size(75, 23);
-            CookBtn.TabIndex = 1;
-            CookBtn.Text = "Повар";
-            CookBtn.UseVisualStyleBackColor = true;
-            CookBtn.Visible = false;
-            CookBtn.Click += CookBtn_Click;
             // 
             // UserSelectionForm
             // 
@@ -65,7 +53,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(134, 111);
             Controls.Add(ChiefBtn);
-            Controls.Add(CookBtn);
             Controls.Add(GuestBtn);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
@@ -78,6 +65,5 @@
 
         private Button GuestBtn;
         private Button ChiefBtn;
-        private Button CookBtn;
     }
 }
